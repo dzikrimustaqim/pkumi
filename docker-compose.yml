@@ -29,9 +29,9 @@ services:
       retries: 3
       start_period: 40s
 
-  nginx:
+  web:
     image: nginx:1.27-alpine
-    container_name: pkumi_nginx
+    container_name: pkumi_web
     restart: unless-stopped
     ports:
       - "${APP_PORT}:80"
