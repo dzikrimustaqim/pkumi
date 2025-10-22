@@ -546,11 +546,6 @@ docker-compose up -d --build
 
 **Cons:**
 - Perlu setup database eksternal terlebih dahulu
-# http://your-server-ip:18081
-```
-
-**Pros:** Database terkelola, backup otomatis, scalable, production-ready  
-**Cons:** Perlu setup database eksternal terlebih dahulu
 
 ### Scenario 3: Multiple Instances (Load Balancing)
 
@@ -567,6 +562,13 @@ docker-compose -p pkumi_staging up -d
 ```
 
 Kemudian setup reverse proxy (nginx/traefik) untuk load balancing.
+
+**Pros:**
+- Multiple environments di satu server
+- Resource efficiency
+
+**Cons:**
+- Perlu reverse proxy untuk load balancing
 
 ## 🔍 Troubleshooting
 
